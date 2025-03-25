@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saruliyadda Garden Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Saruliyadda Logo">
+            </div>
+            <h1 class="site-title">Saruliyadda Garden Shop</h1>
+            <div class="menu-icon" onclick="openNav()">&#9776;</div>
+        </div>
 
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" onclick="openTab('home')">Home</a></li>
+                <li><a href="#" onclick="openTab('about')">About Us</a></li>
+                <li><a href="#" onclick="openTab('products')">Products</a></li>
+                <li><a href="#" onclick="openTab('services')">Services</a></li>
+                <li><a href="#" onclick="openTab('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Right Side Navigation for Mobile -->
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#" onclick="openTab('home'); closeNav()">Home</a>
+        <a href="#" onclick="openTab('about'); closeNav()">About Us</a>
+        <a href="#" onclick="openTab('products'); closeNav()">Products</a>
+        <a href="#" onclick="openTab('services'); closeNav()">Services</a>
+        <a href="#" onclick="openTab('contact'); closeNav()">Contact Us</a>
+    </div>
+
+    <div id="content">
+        <section id="home" class="tab">
+            <h2>Welcome to Saruliyadda Garden Shop</h2>
+            <p>Your one-stop shop for all gardening needs.</p>
+        </section>
+
+        <section id="about" class="tab">
+            <h2>About Us</h2>
+            <p>We offer a wide variety of plants, garden tools, and accessories to make your garden thrive.</p>
+        </section>
+
+        <section id="products" class="tab">
+            <h2>Our Products</h2>
+            <div class="product-gallery"></div>
+        </section>
+
+        <section id="services" class="tab">
+            <h2>Our Services</h2>
+            <p>We provide expert gardening advice, landscaping services, and plant care tips.</p>
+        </section>
+
+        <section id="contact" class="tab">
+            <h2>Contact Us</h2>
+            <p>Email: contact@saruliyadda.com</p>
+            <p>Phone: +94 77 123 4567</p>
+        </section>
+    </div>
+
+    <script src="functions.js"></script>
+</body>
+</html>
