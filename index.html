@@ -6,64 +6,69 @@
     <title>Saruliyadda Garden Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <body>
     <header>
         <div class="header-container">
-            <div class="logo">
-                <img src="logo.png" alt="Saruliyadda Logo">
+            <div class="logo-title-container">
+                <div class="logo">
+                    <img src="logo.png" alt="Saruliyadda Logo">
+                </div>
+                <h1 class="site-title">Saruliyadda Garden Shop</h1>
             </div>
-            <h1 class="site-title">Saruliyadda Garden Shop</h1>
-            <div class="menu-icon" onclick="openNav()">&#9776;</div>
+            <div class="menu-icon" onclick="toggleNav()">&#9776;</div>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#" class="nav-link" data-tab="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-tab="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-tab="products">Products</a></li>
+                    <li><a href="#" class="nav-link" data-tab="contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#" onclick="openTab('home')">Home</a></li>
-                <li><a href="#" onclick="openTab('about')">About Us</a></li>
-                <li><a href="#" onclick="openTab('products')">Products</a></li>
-                <li><a href="#" onclick="openTab('services')">Services</a></li>
-                <li><a href="#" onclick="openTab('contact')">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Right Side Navigation for Mobile -->
-    <div id="sideNav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="#" onclick="openTab('home'); closeNav()">Home</a>
-        <a href="#" onclick="openTab('about'); closeNav()">About Us</a>
-        <a href="#" onclick="openTab('products'); closeNav()">Products</a>
-        <a href="#" onclick="openTab('services'); closeNav()">Services</a>
-        <a href="#" onclick="openTab('contact'); closeNav()">Contact Us</a>
-    </div>
-
-    <div id="content">
-        <section id="home" class="tab">
-            <h2>Welcome to Saruliyadda Garden Shop</h2>
-            <p>Your one-stop shop for all gardening needs.</p>
+    <main>
+        <section id="home" class="tab active">
+            <h2>Welcome to Our Garden Paradise</h2>
+            <p>Discover the perfect plants to bring life to your space</p>
         </section>
 
         <section id="about" class="tab">
-            <h2>About Us</h2>
-            <p>We offer a wide variety of plants, garden tools, and accessories to make your garden thrive.</p>
+            <h2>About Our Garden Shop</h2>
+            <p>We're passionate about helping you create beautiful green spaces.</p>
         </section>
 
         <section id="products" class="tab">
-            <h2>Our Products</h2>
-            <div class="product-gallery"></div>
-        </section>
-
-        <section id="services" class="tab">
-            <h2>Our Services</h2>
-            <p>We provide expert gardening advice, landscaping services, and plant care tips.</p>
+            <h2>Our Plant Collection</h2>
+            <div class="product-gallery">
+                <div class="product-card">
+                    <img src="plant1.jpg" alt="Tropical Plant" class="product-img">
+                    <div class="product-info">
+                        <h3>Tropical Foliage</h3>
+                        <p>Lush green leaves perfect for indoor spaces</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="plant2.jpg" alt="Flowering Plant" class="product-img">
+                    <div class="product-info">
+                        <h3>Flowering Beauty</h3>
+                        <p>Bright blooms to color your garden</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="contact" class="tab">
-            <h2>Contact Us</h2>
-            <p>Email: contact@saruliyadda.com</p>
-            <p>Phone: +94 77 123 4567</p>
+            <h2>Visit Us</h2>
+            <p>123 Garden Lane, Greenville</p>
+            <p>Open daily 9am-6pm</p>
         </section>
-    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Saruliyadda Garden Shop. All rights reserved.</p>
+    </footer>
 
     <script src="functions.js"></script>
 </body>

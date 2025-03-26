@@ -1,21 +1,49 @@
-// Function to open tabs
+// Tab functionality
 function openTab(tabId) {
-    let tabs = document.querySelectorAll(".tab");
-    tabs.forEach(tab => tab.classList.remove("active"));
-    document.getElementById(tabId).classList.add("active");
+    // Hide all tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Show the selected tab
+    document.getElementById(tabId).classList.add('active');
+    
+    // Update active nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    document.querySelector(`.nav-link[data-tab="${tabId}"]`).classList.add('active');
 }
 
-// Default: Show home tab on page load
-document.addEventListener("DOMContentLoaded", function () {
+// Mobile menu toggle
+function toggleNav() {
+    const nav = document.getElementById('mainNav');
+    nav.classList.toggle('active');
+}
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            toggleNav();
+        }
+        openTab(this.dataset.tab);
+    });
+});
+
+// Set home tab as active when page loads
+document.addEventListener('DOMContentLoaded', function() {
     openTab('home');
 });
 
-// Open right-side navigation
-function openNav() {
-    document.getElementById("sideNav").style.width = "250px";
-}
-
-// Close right-side navigation
-function closeNav() {
-    document.getElementById("sideNav").style.width = "0";
-}
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const nav = document.getElementById('mainNav');
+    const menuIcon = document.querySelector('.menu-icon');
+    
+    if (window.innerWidth <= 768 && 
+        !event.target.closest('.main-nav') && 
+        event.target !== menuIcon) {
+        nav.classList.remove('active');
+    }
+});
