@@ -296,8 +296,9 @@ main {
     background: rgba(255, 255, 255, 0.85);
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 .location-cards {
     display: flex;
     justify-content: space-around;
@@ -342,18 +343,54 @@ main {
     background-color: #218c45;
 }
 
+.contact-us-container {
+    margin-top: 40px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Facebook Icon Styling */
+
+/* Contact Us Section */
+.contact-us {
+    margin-top: 40px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-us p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-us a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-us a:hover {
+    text-decoration: underline;
+}
+
 /* Hover effect for cards */
 .location-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-
 #contact p {
     margin: 15px auto;
     font-size: 1.1rem;
     color: #444;
 }
+
 
 /* FOOTER */
 footer {
