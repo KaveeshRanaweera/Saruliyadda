@@ -40,29 +40,53 @@
         </section>
 
         <section id="products" class="tab">
-            <h2>Our Plant Collection</h2>
-            <div class="product-gallery">
-                <div class="product-card">
-                    <img src="plant1.jpg" alt="Tropical Plant" class="product-img">
-                    <div class="product-info">
-                        <h3>Tropical Foliage</h3>
-                        <p>Lush green leaves perfect for indoor spaces</p>
-                    </div>
+            <h2>Our Product Collection</h2>
+            <div class="product-tabs">
+                <button class="tab-btn active" onclick="showProducts('unipower')">Unipower</button>
+                <button class="tab-btn" onclick="showProducts('saruliyadda')">Saruliyadda</button>
+            </div>
+            
+            <div class="product-gallery" id="product-gallery">
+                <!-- Unipower Products -->
+                <div class="product-card unipower">
+                    <img src="unipower1.jpg" alt="Unipower Product">
+                    <p>Unipower Product 1</p>
                 </div>
-                <div class="product-card">
-                    <img src="plant2.jpg" alt="Flowering Plant" class="product-img">
-                    <div class="product-info">
-                        <h3>Flowering Beauty</h3>
-                        <p>Bright blooms to color your garden</p>
-                    </div>
+                <div class="product-card unipower">
+                    <img src="unipower2.jpg" alt="Unipower Product">
+                    <p>Unipower Product 2</p>
+                </div>
+            
+                <!-- Saruliyadda Products -->
+                <div class="product-card saruliyadda">
+                    <img src="saruliyadda1.jpg" alt="Saruliyadda Product">
+                    <p>Saruliyadda Product 1</p>
+                </div>
+                <div class="product-card saruliyadda">
+                    <img src="saruliyadda2.jpg" alt="Saruliyadda Product">
+                    <p>Saruliyadda Product 2</p>
                 </div>
             </div>
+            
         </section>
 
         <section id="contact" class="tab">
             <h2>Visit Us</h2>
-            <p>123 Garden Lane, Greenville</p>
-            <p>Open daily 9am-6pm</p>
+            <div class="location-cards">
+                <!-- Location 1 -->
+                <div class="location-card">
+                    <h3>Bandarawatta Store</h3>
+                    <p>No. 123, Main Street, Kandy</p>
+                    <button class="map-btn" onclick="openMap('7.2906, 80.6337')">Get Directions</button>
+                </div>
+                
+                <!-- Location 2 -->
+                <div class="location-card">
+                    <h3>Makola Store</h3>
+                    <p>No. 456, Colombo Road, Peradeniya</p>
+                    <button class="map-btn" onclick="openMap('7.2575, 80.5987')">Get Directions</button>
+                </div>
+            </div>
         </section>
     </main>
 

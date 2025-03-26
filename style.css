@@ -19,16 +19,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f8f9fa;
     background-image: url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-blend-mode: overlay;
-    background-color: rgba(248, 249, 250, 0.9);
+    background-color: rgba(248, 249, 250, 0.9); /* Keep this line */
     color: #333;
     line-height: 1.6;
 }
+
 
 /* HEADER */
 header {
@@ -256,6 +256,40 @@ main {
     font-size: 0.95rem;
     line-height: 1.6;
 }
+.product-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    border: 2px solid #2E8B57; /* Green border */
+    border-radius: 25px;
+    background: white;
+    color: #2E8B57;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn:hover {
+    background: #E8F5E9; /* Light green tint on hover */
+}
+
+.tab-btn.active {
+    background: #2E8B57; /* Highlight green when selected */
+    color: white;
+    transform: scale(1.05);
+}
+
+.product-card {
+    display: none; /* Hide all products by default */
+}
+
 
 /* CONTACT SECTION */
 #contact {
@@ -264,6 +298,56 @@ main {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+.location-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Location Card Style */
+.location-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.location-card p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Styling for the Get Directions button */
+.map-btn {
+    padding: 10px 20px;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.map-btn:hover {
+    background-color: #218c45;
+}
+
+/* Hover effect for cards */
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
 
 #contact p {
     margin: 15px auto;
@@ -345,6 +429,7 @@ footer p {
         padding: 15px 0;
     }
 
+
     .main-nav a {
         display: block;
         text-align: center;
@@ -353,11 +438,22 @@ footer p {
     }
 
     .product-gallery {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .product-card {
+        max-width: 100%;
     }
 
     .site-title {
         font-size: 1.5rem;
+    }
+    .tab-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 20px;
     }
 
     .tab h2 {
@@ -390,6 +486,19 @@ footer p {
 
     #contact p {
         font-size: 1rem;
+    }
+    .map-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .location-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-card {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 

@@ -14,6 +14,36 @@ function openTab(tabId) {
     });
     document.querySelector(`.nav-link[data-tab="${tabId}"]`).classList.add('active');
 }
+function showProducts(category) {
+    let allProducts = document.querySelectorAll(".product-card");
+    let buttons = document.querySelectorAll(".tab-btn");
+
+    // Hide all products
+    allProducts.forEach(product => {
+        product.style.display = "none";
+    });
+
+    // Show only selected category products
+    let selectedProducts = document.querySelectorAll("." + category);
+    selectedProducts.forEach(product => {
+        product.style.display = "block";
+    });
+
+    // Highlight the active tab
+    buttons.forEach(btn => btn.classList.remove("active"));
+    event.target.classList.add("active");
+}
+
+// Show Unipower products by default when page loads
+document.addEventListener("DOMContentLoaded", function() {
+    showProducts('unipower');
+});
+
+function openMap(location) {
+    const mapUrl = `https://www.google.com/maps/dir/?api=1&destination=${location}`;
+    window.open(mapUrl, "_blank");
+}
+
 
 // Mobile menu toggle
 function toggleNav() {
