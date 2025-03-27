@@ -33,6 +33,21 @@ function showProducts(category) {
     buttons.forEach(btn => btn.classList.remove("active"));
     event.target.classList.add("active");
 }
+// Add this to your existing script.js
+// Automatic slide advancement
+function startSlider() {
+    const track = document.querySelector('.slider-track');
+    let position = 0;
+    
+    setInterval(() => {
+        position = (position + 100) % 200;
+        track.style.transform = `translateX(-${position}%)`;
+    }, 5000);
+}
+
+// Initialize slider after DOM load
+document.addEventListener('DOMContentLoaded', startSlider);
+
 
 // Show Unipower products by default when page loads
 document.addEventListener("DOMContentLoaded", function() {
