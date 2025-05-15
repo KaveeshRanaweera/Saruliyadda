@@ -653,12 +653,6 @@ footer p {
 
 
 /* Hero */
-.hero {
-  text-align: center;
-  background: linear-gradient(to right, #00bcd4, #0097a7);
-  color: white;
-  padding: 4rem 1rem;
-}
 
 .hero h3 {
   font-size: 2.5rem;
@@ -676,16 +670,7 @@ footer p {
   font-weight: bold;
 }
 
-.container {
-  padding: 3rem 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
 
-.container h4 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
 
 /* Product Grid */
 .product-grid {
@@ -706,26 +691,10 @@ footer p {
 }
 
 /* Awards */
-.awards-section {
-  padding: 40px 10px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  margin: 20px;
-}
 
-.awards-section h3 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 25px;
-  color: #333;
-}
 
-.awards-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+
+
 
 .award-card {
   background-color: #f9f9f9;
@@ -779,11 +748,8 @@ footer p {
 
 
 /* Partners Slider */
-.partners {
-  text-align: center;
-  background: #fff;
-  padding: 20px 0;
-}
+/* Partners Slider */
+
 
 .logo-slider {
   overflow: hidden;
@@ -797,7 +763,7 @@ footer p {
 
 .logo-track {
   display: flex;
-  width: calc(200px * 10); /* Number_of_logos * single logo width including margin */
+  width: calc(200px * 10); /* Adjust this based on the number of logos */
   animation: scrollLeft 30s linear infinite;
 }
 
@@ -806,7 +772,9 @@ footer p {
   width: 180px;
   margin: 0 10px;
   object-fit: contain;
+  border-radius: 12px; /* Rounded corners for logos */
 }
+
 
 /* Keyframes for continuous scroll */
 @keyframes scrollLeft {
