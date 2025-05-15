@@ -462,6 +462,43 @@ footer p {
     font-weight: 600;
 }
 
+.mission-vision-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.mission-vision-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mission-vision-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 40px 20px; /* optional spacing from surrounding content */
+}
+
+
+
+.mission-vision-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.mission-vision-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+
 @keyframes slide {
     0% { transform: translateX(0); }
     100% { transform: translateX(-200%); }
@@ -555,7 +592,7 @@ footer p {
         font-size: 1.2rem;
     }
     #home h3 {
-        font-size: 1rem;
+        font-size: 20px;
     }
 
     .tab p {
@@ -611,4 +648,196 @@ footer p {
     .main-nav ul {
         padding: 0;
     }
+}
+
+
+
+/* Hero */
+.hero {
+  text-align: center;
+  background: linear-gradient(to right, #00bcd4, #0097a7);
+  color: white;
+  padding: 4rem 1rem;
+}
+
+.hero h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background: white;
+  color: #00bcd4;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  padding: 3rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.container h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+}
+
+/* Awards */
+.awards-section {
+  padding: 40px 10px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin: 20px;
+}
+
+.awards-section h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.awards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.award-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.award-card:hover {
+  transform: translateY(-3px);
+}
+
+.award-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.card-content h5 {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Responsive layout for tablets and up */
+/* Smaller text for mobile devices */
+@media (max-width: 480px) {
+  .awards-section h3 {
+    font-size: 20px;
+  }
+
+  .card-content h4 {
+    font-size: 16px;
+  }
+
+  .card-content h5 {
+    font-size: 13px;
+  }
+}
+
+
+/* Partners Slider */
+.partners {
+  text-align: center;
+  background: #fff;
+  padding: 20px 0;
+}
+
+.logo-slider {
+  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #f8f8f8;
+  height: 60px;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(200px * 10); /* Number_of_logos * single logo width including margin */
+  animation: scrollLeft 30s linear infinite;
+}
+
+.logo-track img {
+  height: 50px;
+  width: 180px;
+  margin: 0 10px;
+  object-fit: contain;
+}
+
+/* Keyframes for continuous scroll */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  /* Target the "Who We Are" section by its id and class */
+  #home.hero h3 {
+    font-size: 18px; /* smaller heading */
+  }
+  
+  #home.hero p {
+    font-size: 14px; /* smaller paragraph */
+    line-height: 1.4; /* improve readability */
+  }
+
+  #home.hero .btn {
+    font-size: 14px; /* smaller button text */
+    padding: 8px 16px; /* adjust button padding for smaller size */
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }

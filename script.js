@@ -101,3 +101,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Select the Learn More button
+  const learnMoreBtn = document.querySelector('#home .btn[href="#about"]');
+  
+  if (learnMoreBtn) {
+    learnMoreBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // prevent default anchor jump
+      
+      // Hide all tabs
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      
+      // Show About tab
+      const aboutTab = document.getElementById('about');
+      if (aboutTab) {
+        aboutTab.classList.add('active');
+        aboutTab.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      // Optionally update nav active state
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.dataset.tab === 'about') {
+          link.classList.add('active');
+        }
+      });
+    });
+  }
+});
