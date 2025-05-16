@@ -316,7 +316,7 @@ margin-top: 0.5rem;
 
 .product-card p {
     margin-top: 0.6rem;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 /* CONTACT SECTION */
@@ -420,7 +420,7 @@ footer {
 
 .slider-track {
     display: flex;
-    animation: slide 40s infinite linear;
+    animation: slide 30s infinite linear;
 }
 
 .compost-slide {
@@ -450,7 +450,7 @@ footer {
 }
 
 /* Mission/Vision Section */
-/* .mission-vision-section {
+/* .mission-vision-section { (NOT NEEDED )
     padding: 3.1rem 1.25rem;
     background-color: #f9f9f9;
     border-radius: 1.25rem;
@@ -535,12 +535,13 @@ footer {
 
 .logo-slider {
     overflow: hidden;
-    max-width: 37.5rem;
+    max-width: 40.5rem;
     margin: 0 auto;
     border-radius: 0.6rem;
     background: #f8f8f8;
     height: 3.75rem;
     position: relative;
+    margin-top: 3rem;
 }
 
 .logo-track {
@@ -643,6 +644,10 @@ footer {
         gap: 0.9rem;
     }
 
+    .product-gallery p {
+        font-size: 1rem;
+    }
+
     .site-title {
         font-size: 1.5rem;
     }
@@ -657,7 +662,7 @@ footer {
     }
 
     #home h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
     #home h3 {
@@ -728,8 +733,9 @@ footer {
     
     .card-content p {
         font-size: 0.8rem;
+        font-weight: bold;
     }
-    
+
     .logo-slider {
         height: 3rem;
     }
