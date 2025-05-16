@@ -420,7 +420,7 @@ footer {
 
 .slider-track {
     display: flex;
-    animation: slide 30s infinite linear;
+    animation: slide 40s infinite linear;
 }
 
 .compost-slide {
@@ -433,6 +433,7 @@ footer {
     height: 18.75rem;
     object-fit: cover;
     object-position: center;
+    /* animation: slide 30s infinite linear; */
 }
 
 .slide-caption {
@@ -446,6 +447,7 @@ footer {
     font-size: 1rem;
     text-align: center;
     font-weight: 600;
+    /* animation: slide 30s infinite linear; */
 }
 
 /* Mission/Vision Section */
@@ -572,9 +574,9 @@ footer {
     100% { transform: translateX(-50%); }
 }
 
-.compost-slider:hover .slider-track {
+/* .compost-slider:hover .slider-track {
     animation-play-state: paused;
-}
+} */
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 48rem) {
