@@ -132,23 +132,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-function showProducts(category) {
-    const allProducts = document.querySelectorAll('.product-card');
-    const buttons = document.querySelectorAll('.tab-btn');
-
-    allProducts.forEach(product => {
-        if (product.classList.contains(category)) {
-            product.style.display = 'block';
-        } else {
-            product.style.display = 'none';
-        }
-    });
-
-    buttons.forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`.tab-btn[onclick="showProducts('${category}')"]`).classList.add('active');
-}
-
-// Optional: Call once on load to show Unipower products by default
-document.addEventListener("DOMContentLoaded", () => {
-    showProducts('unipower');
-});
