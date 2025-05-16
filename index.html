@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saruliyadda Garden Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <body>
     <header>
         <div class="header-container">
             <div class="logo-title-container">
                 <div class="logo">
-                    <img src="Images/Logo.png" alt="Saruliyadda Logo">
+                    <img src="images/logo.png" alt="Saruliyadda Logo">
                 </div>
                 <h1 class="site-title">Saruliyadda Garden Shop</h1>
             </div>
-            <div class="menu-icon" onclick="toggleNav()">&#9776;</div>
+            <div class="menu-icon" onclick="toggleNav()" aria-label="Toggle navigation">&#9776;</div>
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="#" class="nav-link" data-tab="home">Home</a></li>
@@ -34,200 +34,173 @@
             <div class="compost-slider">
                 <div class="slider-track">
                     <div class="compost-slide">
-                        <img src="Images/fruit 1.jpg" alt="Compost production process" loading="lazy">
+                        <img src="images/fruit 1.jpg" alt="Compost production process" loading="lazy">
                         <div class="slide-caption">Organic Compost Manufacturing</div>
                     </div>
                     <div class="compost-slide">
-                        <img src="Images/fruit 2.jpg" alt="Compost packaging" loading="lazy">
+                        <img src="images/fruit 2.jpg" alt="Compost packaging" loading="lazy">
                         <div class="slide-caption">Eco-Friendly Packaging</div>
                     </div>
                     <div class="compost-slide">
-                        <img src="Images/fruit 3.jpg" alt="Compost production process" loading="lazy">
+                        <img src="images/fruit3.jpg" alt="Compost production process" loading="lazy">
                         <div class="slide-caption">Organic Compost Manufacturing</div>
                     </div>
                 </div>
-                 <div class="contact-us-container">
-                   <!-- Hero Section -->
-    <section id="home" class="hero">
-      <h3>Who We Are</h3>
-      <p>With over 20 years of experience, Saruliadda Garden Shop is a trusted name in organic gardening and plant care. Founded by Mr. D. Upul Priyadarshana, we specialize in expert consultancy, high-quality products, and sustainable solutions. We’re proud creators of Saruliadda Compost, a nutrient-rich organic fertilizer, and authorized distributors of CIC and UNIPOWER. At Saruliadda, we help your garden grow greener—naturally.</p>
-      <a href="#about" class="btn">Learn More</a>
-    </section>
-
-   
-
-    <!-- Awards & News Section -->
-<section id="home" class="hero">
-  <h3>Awards & News</h3>
-  <div class="awards-grid">
-    <!-- Card 1 -->
-    <div class="award-card">
-      <img src="images/award1.jpg" alt="Best Tech Startup 2023">
-      <div class="card-content">
-        <h4>🏆 Best Tech Startup 2023</h4>
-        <h5>Recognized by LankaTech Awards for innovation and outstanding growth in the tech sector.</h5>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="award-card">
-      <img src="images/news1.jpg" alt="Daily Business Magazine">
-      <div class="card-content">
-        <h4>📰 Featured in Daily Business Magazine</h4>
-        <h5>Our CEO discussed the company’s journey and future plans in a full-page feature article.</h5>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="award-card">
-      <img src="images/iso.jpg" alt="ISO 9001 Certified">
-      <div class="card-content">
-        <h4>🏅 ISO 9001 Certified</h4>
-        <h5>Awarded for maintaining top-tier quality assurance and management standards.</h5>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Partners -->
-    <section id="home" class="hero">
-      <div class="partners">
-  <h3>Our Partners</h3>
-  <div class="logo-slider">
-    <div class="logo-track">
-      <!-- First set of logos -->
-      <img src="logo1.png" alt="Brand 1" />
-      <img src="logo2.png" alt="Brand 2" />
-      <img src="logo3.png" alt="Brand 3" />
-      <img src="logo4.png" alt="Brand 4" />
-      <img src="logo5.png" alt="Brand 5" />
-      <!-- Repeat logos for smooth loop -->
-      <img src="logo1.png" alt="Brand 1" />
-      <img src="logo2.png" alt="Brand 2" />
-      <img src="logo3.png" alt="Brand 3" />
-      <img src="logo4.png" alt="Brand 4" />
-      <img src="logo5.png" alt="Brand 5" />
-    </div>
-  </div>
-</div>
-
-    </section>
-                </div>
             </div>
-            </div>                     
+            
+            <article class="hero">
+                <h3>Who We Are</h3>
+                <p>With over 20 years of experience, Saruliadda Garden Shop is a trusted name in organic gardening and plant care. Founded by Mr. D. Upul Priyadarshana, we specialize in expert consultancy, high-quality products, and sustainable solutions. We're proud creators of Saruliadda Compost, a nutrient-rich organic fertilizer, and authorized distributors of CIC and UNIPOWER. At Saruliadda, we help your garden grow greener—naturally.</p>
+                <a href="#about" class="btn">Learn More</a>
+            </article>
+
+            <article class="hero">
+                <h3>Awards & News</h3>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <img src="images/award1.jpg" alt="Best Tech Startup 2023 Award">
+                        <div class="card-content">
+                            <h4>🏆 Best Tech Startup 2023</h4>
+                            <p>Recognized by LankaTech Awards for innovation and outstanding growth in the tech sector.</p>
+                        </div>
+                    </div>
+                    <div class="award-card">
+                        <img src="images/news1.jpg" alt="Daily Business Magazine Feature">
+                        <div class="card-content">
+                            <h4>📰 Featured in Daily Business Magazine</h4>
+                            <p>Our CEO discussed the company's journey and future plans in a full-page feature article.</p>
+                        </div>
+                    </div>
+                    <div class="award-card">
+                        <img src="images/iso.jpg" alt="ISO 9001 Certification">
+                        <div class="card-content">
+                            <h4>🏅 ISO 9001 Certified</h4>
+                            <p>Awarded for maintaining top-tier quality assurance and management standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="hero">
+                <div class="partners">
+                    <h3>Our Partners</h3>
+                    <div class="logo-slider">
+                        <div class="logo-track">
+                            <img src="images/logo1.png" alt="Brand 1">
+                            <img src="images/logo2.png" alt="Brand 2">
+                            <img src="images/logo3.png" alt="Brand 3">
+                            <img src="images/logo4.png" alt="Brand 4">
+                            <img src="images/logo5.png" alt="Brand 5">
+                            <img src="images/logo1.png" alt="Brand 1">
+                            <img src="images/logo2.png" alt="Brand 2">
+                            <img src="images/logo3.png" alt="Brand 3">
+                            <img src="images/logo4.png" alt="Brand 4">
+                            <img src="images/logo5.png" alt="Brand 5">
+                        </div>
+                    </div>
+                </div>
+            </article>
         </section>
 
         <section id="about" class="tab">
             <h2>About Our Garden Shop</h2>
             <p>Welcome to Saruliadda Garden Shop, your trusted partner in sustainable gardening and organic growth solutions. With over 20 years of experience in the horticultural industry, we have proudly earned the trust and appreciation of countless customers through our unwavering commitment to quality, expert consultancy, and customer satisfaction.</p>
-        <P>Founded by Mr. D. Upul Priyadarshana, Saruliadda Garden Shop began with a vision to promote eco-friendly gardening practices and empower communities with the knowledge and resources to cultivate healthy, thriving plants. Today, we stand as a reputable name in the industry, known for our dedication to excellence and our passion for green living.</P>
-       <p>We are authorized distributors of CIC and UNIPOWER products, two of the most recognized and respected brands in agricultural and horticultural solutions. Our long-standing partnerships with these companies ensure that our customers receive only the most reliable and effective products on the market.</p>
-    <p>One of our proudest achievements is the creation of Saruliadda Compost, a premium organic compost made entirely from natural materials. Carefully formulated through years of research and hands-on experience, Saruliadda Compost is one of the most nutrient-rich and effective fertilizers available, designed to enhance soil health, boost plant growth, and support sustainable agriculture.</p>
-    <p>At Saruliadda Garden Shop, we don’t just sell compost—we share knowledge. Our experienced team offers expert consultation services to guide home gardeners, farmers, and landscape professionals on proper plant care, soil improvement, and sustainable cultivation techniques.</p>
-    <p>Whether you're a seasoned grower or just starting your gardening journey, Saruliadda Garden Shop is here to support you every step of the way.</p>
-    <p><b>Grow with confidence. Grow with Saruliadda.</b></p>
-    <section id="mission-vision" class="mission-vision-section">
-  <div class="container">
-    <div class="card">
-      <h2>Our Mission</h2>
-      <p>
-       To empower individuals and communities to embrace sustainable gardening by providing high-quality organic products, expert guidance, and trusted partnerships—nurturing healthier plants, soil, and lives.
-      </p>
-    </div>
-    <div class="card">
-      <h2>Our Vision</h2>
-      <p>
-        To be Sri Lanka’s leading name in eco-friendly horticulture, recognized for innovation, integrity, and commitment to cultivating a greener, more sustainable future for generations to come.
-      </p>
-    </div>
-  </div>
-</section>
-    </section>
-
-
-
+            <p>Founded by Mr. D. Upul Priyadarshana, Saruliadda Garden Shop began with a vision to promote eco-friendly gardening practices and empower communities with the knowledge and resources to cultivate healthy, thriving plants. Today, we stand as a reputable name in the industry, known for our dedication to excellence and our passion for green living.</p>
+            <p>We are authorized distributors of CIC and UNIPOWER products, two of the most recognized and respected brands in agricultural and horticultural solutions. Our long-standing partnerships with these companies ensure that our customers receive only the most reliable and effective products on the market.</p>
+            <p>One of our proudest achievements is the creation of Saruliadda Compost, a premium organic compost made entirely from natural materials. Carefully formulated through years of research and hands-on experience, Saruliadda Compost is one of the most nutrient-rich and effective fertilizers available, designed to enhance soil health, boost plant growth, and support sustainable agriculture.</p>
+            <p>At Saruliadda Garden Shop, we don't just sell compost—we share knowledge. Our experienced team offers expert consultation services to guide home gardeners, farmers, and landscape professionals on proper plant care, soil improvement, and sustainable cultivation techniques.</p>
+            <p>Whether you're a seasoned grower or just starting your gardening journey, Saruliadda Garden Shop is here to support you every step of the way.</p>
+            <p><strong>Grow with confidence. Grow with Saruliadda.</strong></p>
+            
+            <section id="mission-vision" class="mission-vision-section">
+                <div class="container">
+                    <div class="card">
+                        <h2>Our Mission</h2>
+                        <p>To empower individuals and communities to embrace sustainable gardening by providing high-quality organic products, expert guidance, and trusted partnerships—nurturing healthier plants, soil, and lives.</p>
+                    </div>
+                    <div class="card">
+                        <h2>Our Vision</h2>
+                        <p>To be Sri Lanka's leading name in eco-friendly horticulture, recognized for innovation, integrity, and commitment to cultivating a greener, more sustainable future for generations to come.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
 
         <section id="products" class="tab">
             <h2>Our Product Collection</h2>
             <div class="product-tabs">
-                <button class="tab-btn active" onclick="showProducts('unipower')">Unipower</button>
-                <button class="tab-btn" onclick="showProducts('saruliyadda')">Saruliyadda</button>
-                <button class="tab-btn" onclick="showProducts('CIC')">CIC</button>
+                <button type="button" class="tab-btn active" onclick="showProducts('unipower')">Unipower</button>
+                <button type="button" class="tab-btn" onclick="showProducts('saruliyadda')">Saruliyadda</button>
+                <button type="button" class="tab-btn" onclick="showProducts('CIC')">CIC</button>
             </div>
             
             <div class="product-gallery" id="product-gallery">
                 <!-- Unipower Products -->
                 <div class="product-card unipower">
-                    <img src="unipower1.jpg" alt="Unipower Product">
+                    <img src="images/unipower1.jpg" alt="Unipower Product 1">
                     <p>Unipower Product 1</p>
                 </div>
                 <div class="product-card unipower">
-                    <img src="unipower2.jpg" alt="Unipower Product">
+                    <img src="images/unipower2.jpg" alt="Unipower Product 2">
                     <p>Unipower Product 2</p>
                 </div>
             
                 <!-- Saruliyadda Products -->
                 <div class="product-card saruliyadda">
-                    <img src="saruliyadda1.jpg" alt="Saruliyadda Product">
+                    <img src="images/saruliyadda1.jpg" alt="Saruliyadda Product 1">
                     <p>Saruliyadda Product 1</p>
                 </div>
                 <div class="product-card saruliyadda">
-                    <img src="saruliyadda2.jpg" alt="Saruliyadda Product">
+                    <img src="images/saruliyadda2.jpg" alt="Saruliyadda Product 2">
                     <p>Saruliyadda Product 2</p>
                 </div>
 
-<!-- CIC Products -->
+                <!-- CIC Products -->
                 <div class="product-card CIC">
-                    <img src="CIC.jpg" alt="CIC Product">
+                    <img src="images/cic1.jpg" alt="CIC Product 1">
                     <p>CIC Product 1</p>
                 </div>
                 <div class="product-card CIC">
-                    <img src="CIC2.jpg" alt="CIC Product">
+                    <img src="images/cic2.jpg" alt="CIC Product 2">
                     <p>CIC Product 2</p>
                 </div>
                 <div class="product-card CIC">
-                    <img src="CIC3.jpg" alt="CIC Product">
+                    <img src="images/cic3.jpg" alt="CIC Product 3">
                     <p>CIC Product 3</p>
                 </div>
                 <div class="product-card CIC">
-                    <img src="CIC4.jpg" alt="CIC Product">
+                    <img src="images/cic4.jpg" alt="CIC Product 4">
                     <p>CIC Product 4</p>
                 </div>
             </div>
-            
         </section>
 
         <section id="contact" class="tab">
-            <!-- Visit Us Section -->
-            <div class="visit-us-container">
+            <article class="visit-us-container">
                 <h2>Visit Us</h2>
                 <div class="location-cards">
-                    <!-- Location 1 -->
                     <div class="location-card">
                         <h3>Bandarawatta Store</h3>
                         <p>645- D , Kandy rd, Bandarawatta , KADAWATHA</p>
-                        <button class="map-btn" onclick="openMap('Saruliyadda Garden Shop, 2X56+3F2, Bandarawatta, Eldeniya')">Get Directions</button>
+                        <button type="button" class="map-btn" onclick="openMap('Saruliyadda Garden Shop, 2X56+3F2, Bandarawatta, Eldeniya')">Get Directions</button>
                     </div>
                     
-                    <!-- Location 2 -->
                     <div class="location-card">
                         <h3>Makola Store</h3>
                         <p>281/B Makola rd, Kiribathgoda</p>
-                        <button class="map-btn" onclick="openMap('Saruliyadda Garden Shop, 281 Makola Rd, Kiribathgoda')">Get Directions</button>
+                        <button type="button" class="map-btn" onclick="openMap('Saruliyadda Garden Shop, 281 Makola Rd, Kiribathgoda')">Get Directions</button>
                     </div>
                 </div>
-            </div>
+            </article>
         
-            <!-- Contact Us Section -->
-            <div class="contact-us-container">
+            <article class="contact-us-container">
                 <h2>Contact Us</h2>
-                <div class="contact-info" style="text-align: left;">
+                <div class="contact-info">
                     <p><strong>Phone:</strong> +94 777 676 958</p>
                     <p><strong>Hotline:</strong> +94 777 676 958</p>
-                    <p><strong>Email:</strong> <a href="mailto:saruliyaddaimports2020@gmail.com"> Saruliyadda Imports</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:saruliyaddaimports2020@gmail.com">Saruliyadda Imports</a></p>
                 </div>
-            </div>
+            </article>
         </section>
     </main>
 
@@ -236,7 +209,7 @@
             <p>&copy; 2025 Saruliyadda Garden Shop. All rights reserved.</p>
             <div class="footer-separator"></div>
             <div class="powered-by">
-                <a href="https://www.trexidelabs.cloud/" target="_blank">Powered by @Trexide Labs</a>
+                <a href="https://www.trexidelabs.cloud/" target="_blank" rel="noopener noreferrer">Powered by @Trexide Labs</a>
             </div>
         </div>
     </footer>
