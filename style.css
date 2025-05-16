@@ -433,7 +433,6 @@ footer {
     height: 18.75rem;
     object-fit: cover;
     object-position: center;
-    /* animation: slide 30s infinite linear; */
 }
 
 .slide-caption {
@@ -451,14 +450,14 @@ footer {
 }
 
 /* Mission/Vision Section */
-.mission-vision-section {
+/* .mission-vision-section {
     padding: 3.1rem 1.25rem;
     background-color: #f9f9f9;
     border-radius: 1.25rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 2.5rem 1.25rem;
-}
+} */
 
 .mission-vision-section .container {
     display: flex;
