@@ -230,9 +230,78 @@ margin-top: 0.5rem;
   margin-bottom: 2.5rem;
   text-decoration: none;
   font-size: 0.6rem;
-  text-align: right;
+  transition: background-color 0.3s ease;
   /* font-weight: bold; */
 }
+
+/* product catregories */
+
+.product-categories {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.product-categories h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.accordion {
+  background-color: #edf2f7;
+  color: #333;
+  cursor: pointer;
+  padding: 14px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: 0.3s;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.accordion:hover,
+.accordion.active {
+  background-color: #c6f6d5;
+}
+
+.panel {
+  padding: 0 20px;
+  display: none;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  border-left: 3px solid #38a169;
+  border-radius: 0 0 10px 10px;
+}
+
+.panel ul {
+  list-style: disc;
+  margin: 10px 0 15px 20px;
+  padding: 0;
+}
+
+/* product button */
+.more-info-btn-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.more-info-btn {
+  margin-top: 0.5rem;
+  display: inline-block;
+  background: green;
+  color: white;
+  padding: 0.4rem 0.7rem;
+  border-radius: 25px;
+  margin-bottom: 2.5rem;
+  text-decoration: none;
+  font-size: 0.6rem;
+  transition: background-color 0.3s ease;
+}
+
 
 /* ABOUT SECTION */
 

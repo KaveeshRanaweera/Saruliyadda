@@ -354,3 +354,38 @@ const App = {
 
 // Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => App.init());
+
+
+// Collapsible accordion behavior
+document.addEventListener('DOMContentLoaded', () => {
+  const acc = document.querySelectorAll('.accordion');
+  acc.forEach(button => {
+    button.addEventListener('click', function () {
+      this.classList.toggle('active');
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  });
+});
+
+
+// Product scroll top
+function openTab(tabId) {
+    // Hide all tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // Show the selected tab
+    const selectedTab = document.getElementById(tabId);
+    selectedTab.classList.add('active');
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Update active nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    document.querySelector(`.nav-link[data-tab="${tabId}"]`)?.classList.add('active');
+}
