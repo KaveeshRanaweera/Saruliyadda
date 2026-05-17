@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saruliyadda Garden Shop | Premium Organic Compost & Garden Supplies</title>
+    <meta name="description" content="Sri Lanka's trusted organic compost producer and garden supply store. 20+ years of growing gardens naturally.">
+    <meta name="theme-color" content="#2d6a4f">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="HomePageImages/Logo.png" alt="Saruliyadda Logo">
+                <div class="logo-text">
+                    <span class="logo-name">Saruliyadda</span>
+                    <span class="logo-sub">Garden Shop</span>
+                </div>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#stores" class="nav-link">Our Stores</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="hero-slider">
+                <div class="slide active" style="background-image: url('HomePageImages/fruit 2.jpg')"></div>
+                <div class="slide" style="background-image: url('HomePageImages/fruit 1.jpg')"></div>
+                <div class="slide" style="background-image: url('HomePageImages/fruit 3.jpg')"></div>
+                <div class="slide" style="background-image: url('HomePageImages/fruit 5.jpg')"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="hero-tag reveal">🌿 Trusted for Over 20 Years</span>
+                <h1 class="reveal">Grow Your Garden<br>the Natural Way</h1>
+                <p class="reveal">Premium organic compost, quality seeds, tools, and everything your garden needs — delivered with love from Saruliyadda.</p>
+                <div class="hero-btns reveal">
+                    <a href="#products" class="btn btn-primary">Browse Products</a>
+                    <a href="https://wa.me/94777676958" target="_blank" class="btn btn-whatsapp"><i class="ph ph-whatsapp-logo"></i> Chat with Us</a>
+                </div>
+            </div>
+            <div class="hero-dots" id="heroDots"></div>
+        </section>
+
+        <!-- Trust Bar -->
+        <section class="trust-bar">
+            <div class="container trust-grid">
+                <div class="trust-item reveal">
+                    <i class="ph ph-plant"></i>
+                    <div><strong>100% Organic</strong><span>Natural ingredients only</span></div>
+                </div>
+                <div class="trust-item reveal">
+                    <i class="ph ph-truck"></i>
+                    <div><strong>Island-Wide Delivery</strong><span>We ship across Sri Lanka</span></div>
+                </div>
+                <div class="trust-item reveal">
+                    <i class="ph ph-users-three"></i>
+                    <div><strong>5,000+ Happy Gardeners</strong><span>Join our growing family</span></div>
+                </div>
+                <div class="trust-item reveal">
+                    <i class="ph ph-shield-check"></i>
+                    <div><strong>Authorized Dealer</strong><span>CIC & Unipower certified</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about-section">
+            <div class="container about-grid">
+                <div class="about-image reveal">
+                    <img src="HomePageImages/fruit 7.jpg" alt="Our garden">
+                    <div class="experience-badge">
+                        <span class="exp-number">20+</span>
+                        <span class="exp-text">Years of Growing</span>
+                    </div>
+                </div>
+                <div class="about-text reveal">
+                    <span class="section-tag">🌱 About Us</span>
+                    <h2>Your Trusted Partner in Organic Gardening</h2>
+                    <p>Welcome to Saruliyadda Garden Shop! Founded by <strong>Mr. D. Upul Priyadarshana</strong>, we've spent over two decades helping Sri Lankan gardeners, farmers, and plant lovers grow healthier, greener gardens — the natural way.</p>
+                    <p>We are the proud creators of <strong>Saruliyadda Compost</strong>, a premium organic fertilizer made entirely from natural materials. We're also authorized distributors of <strong>CIC</strong> and <strong>UNIPOWER</strong> products.</p>
+                    <div class="about-features">
+                        <div class="af"><i class="ph-fill ph-check-circle"></i> Expert gardening consultancy</div>
+                        <div class="af"><i class="ph-fill ph-check-circle"></i> Premium organic compost production</div>
+                        <div class="af"><i class="ph-fill ph-check-circle"></i> Wide range of garden supplies</div>
+                        <div class="af"><i class="ph-fill ph-check-circle"></i> Two convenient store locations</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Compost -->
+        <section class="compost-highlight">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">🏆 Our Signature Product</span>
+                    <h2>Saruliyadda Premium Organic Compost</h2>
+                    <p>The heart of everything we do — carefully crafted compost that transforms your soil and supercharges your plants.</p>
+                </div>
+                <div class="compost-cards">
+                    <div class="compost-card reveal">
+                        <img src="Images/Compost05KG.jpg" alt="Compost 5KG">
+                        <h3>5 KG Pack</h3>
+                        <p>Perfect for home gardens, flower pots, and small vegetable patches.</p>
+                        <a href="https://wa.me/94777676958?text=Hi!%20I'm%20interested%20in%20the%205KG%20compost." target="_blank" class="btn btn-outline-green">Order via WhatsApp</a>
+                    </div>
+                    <div class="compost-card featured reveal">
+                        <div class="popular-badge">Most Popular</div>
+                        <img src="Images/Compost10KG.jpg" alt="Compost 10KG">
+                        <h3>10 KG Pack</h3>
+                        <p>Our bestseller! Ideal for medium gardens, raised beds, and landscaping.</p>
+                        <a href="https://wa.me/94777676958?text=Hi!%20I'm%20interested%20in%20the%2010KG%20compost." target="_blank" class="btn btn-primary">Order via WhatsApp</a>
+                    </div>
+                    <div class="compost-card reveal">
+                        <img src="Images/Compost20KG.jpg" alt="Compost 20KG">
+                        <h3>20 KG Pack</h3>
+                        <p>Best value for farms, large gardens, and commercial growing operations.</p>
+                        <a href="https://wa.me/94777676958?text=Hi!%20I'm%20interested%20in%20the%2020KG%20compost." target="_blank" class="btn btn-outline-green">Order via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Products -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">🛒 Our Products</span>
+                    <h2>Everything Your Garden Needs</h2>
+                    <p>From organic compost to premium fertilizers, seeds to tools — we've got you covered.</p>
+                </div>
+                <div class="product-filters reveal" id="productFilters">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="saruliyadda">🌿 Saruliyadda</button>
+                    <button class="filter-btn" data-filter="unipower">⚡ Unipower</button>
+                    <button class="filter-btn" data-filter="tools">🛠️ Tools</button>
+                </div>
+                <div class="search-box reveal">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="productSearch" placeholder="Search for a product...">
+                </div>
+                <div class="product-grid" id="productGrid"></div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">💬 Customer Love</span>
+                    <h2>What Our Gardeners Say</h2>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>"Saruliyadda compost completely transformed my vegetable garden. My tomatoes and beans have never been this healthy! Highly recommend."</p>
+                        <div class="reviewer"><strong>Kamala Perera</strong> — Home Gardener, Kadawatha</div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>"I've been buying from Saruliyadda for 5 years now. Their products are top quality and Mr. Upul always gives excellent advice."</p>
+                        <div class="reviewer"><strong>Nuwan Fernando</strong> — Landscape Designer, Colombo</div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p>"Best compost in Sri Lanka! My orchids are blooming beautifully. The Makola store staff is always so friendly and helpful."</p>
+                        <div class="reviewer"><strong>Dilini Jayawardena</strong> — Orchid Enthusiast, Kiribathgoda</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Store Locations -->
+        <section id="stores" class="stores-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">📍 Visit Us</span>
+                    <h2>Our Store Locations</h2>
+                    <p>Come visit us! Our friendly team is ready to help you find exactly what your garden needs.</p>
+                </div>
+                <div class="stores-grid">
+                    <div class="store-card reveal">
+                        <div class="store-icon"><i class="ph ph-storefront"></i></div>
+                        <h3>Bandarawatta Store</h3>
+                        <p class="store-address">645-D, Kandy Road, Bandarawatta, Kadawatha</p>
+                        <p class="store-hours"><i class="ph ph-clock"></i> Open Daily: 7:00 AM – 6:00 PM</p>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Saruliyadda+Garden+Shop,+Bandarawatta,+Eldeniya" target="_blank" class="btn btn-outline-green"><i class="ph ph-navigation-arrow"></i> Get Directions</a>
+                    </div>
+                    <div class="store-card reveal">
+                        <div class="store-icon"><i class="ph ph-storefront"></i></div>
+                        <h3>Makola Store</h3>
+                        <p class="store-address">281/B Makola Road, Kiribathgoda</p>
+                        <p class="store-hours"><i class="ph ph-clock"></i> Open Daily: 7:00 AM – 6:00 PM</p>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Saruliyadda+Garden+Shop,+281+Makola+Rd,+Kiribathgoda" target="_blank" class="btn btn-outline-green"><i class="ph ph-navigation-arrow"></i> Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners -->
+        <section class="partners-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">🤝 Our Partners</span>
+                    <h2>Authorized Distributor Of</h2>
+                </div>
+                <div class="partner-logos reveal">
+                    <div class="partner-track">
+                        <img src="HomePageImages/PartnerLogo1.png" alt="CIC">
+                        <img src="HomePageImages/PartnerLogo3.jpg" alt="Partner">
+                        <img src="HomePageImages/PartnerLogo5.jpg" alt="Partner">
+                        <img src="HomePageImages/PartnerLogo7.png" alt="Unipower">
+                        <img src="HomePageImages/PartnerLogo8.png" alt="Partner">
+                        <img src="HomePageImages/PartnerLogo1.png" alt="CIC">
+                        <img src="HomePageImages/PartnerLogo3.jpg" alt="Partner">
+                        <img src="HomePageImages/PartnerLogo5.jpg" alt="Partner">
+                        <img src="HomePageImages/PartnerLogo7.png" alt="Unipower">
+                        <img src="HomePageImages/PartnerLogo8.png" alt="Partner">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
+            <div class="container contact-grid">
+                <div class="contact-info reveal">
+                    <span class="section-tag" style="background: rgba(255,255,255,0.1); color: #95d5b2;">📞 Get in Touch</span>
+                    <h2>We'd Love to Hear From You</h2>
+                    <p>Have questions about our products? Need gardening advice? Reach out anytime!</p>
+                    <div class="contact-items">
+                        <div class="ci">
+                            <i class="ph-fill ph-phone"></i>
+                            <div><strong>Phone</strong><p>+94 777 676 958</p></div>
+                        </div>
+                        <div class="ci">
+                            <i class="ph-fill ph-phone"></i>
+                            <div><strong>Hotline</strong><p>+94 777 676 408</p></div>
+                        </div>
+                        <div class="ci">
+                            <i class="ph-fill ph-envelope"></i>
+                            <div><strong>Email</strong><a href="mailto:saruliyaddaimports2020@gmail.com">saruliyaddaimports2020@gmail.com</a></div>
+                        </div>
+                        <div class="ci">
+                            <i class="ph-fill ph-whatsapp-logo"></i>
+                            <div><strong>WhatsApp</strong><a href="https://wa.me/94777676958" target="_blank">Message us instantly</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrap reveal">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Send Us a Message</h3>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Your Message..." rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary full-width"><i class="ph ph-paper-plane-tilt"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="HomePageImages/Logo.png" alt="Logo">
+                    <div class="logo-text">
+                        <span class="logo-name">Saruliyadda</span>
+                        <span class="logo-sub">Garden Shop</span>
+                    </div>
+                </a>
+                <p>Your trusted partner in sustainable gardening since 2003. Growing gardens and communities — naturally.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#products">Products</a>
+                <a href="#stores">Our Stores</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Products</h4>
+                <a href="#products">Organic Compost</a>
+                <a href="#products">Unipower Range</a>
+                <a href="#products">CIC Products</a>
+                <a href="#products">Garden Tools</a>
+                <a href="#products">Seeds & Pots</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="ph ph-phone"></i> +94 777 676 958</p>
+                <p><i class="ph ph-phone"></i> +94 777 676 408</p>
+                <p><i class="ph ph-envelope"></i> saruliyaddaimports2020@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2025 Saruliyadda Garden Shop. All rights reserved.</p>
+                <p>Powered by <a href="https://www.trexidelabs.cloud/" target="_blank">Trexide Labs</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/94777676958" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" title="Back to top">
+        <i class="ph ph-caret-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

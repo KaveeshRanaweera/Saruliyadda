@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary-800 text-white rounded-full font-semibold hover:bg-primary-700 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary-700 text-primary-800 rounded-full font-semibold hover:bg-primary-800 hover:text-white transition-all;
+  }
+}
+
+/* Floating Leaves Animation */
+@keyframes fall {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  100% { transform: translate(150px, 110vh) rotate(360deg); opacity: 0; }
+}
+
+.leaf {
+  position: absolute;
+  top: -10%;
+  animation: fall linear infinite;
+  opacity: 0;
+}
