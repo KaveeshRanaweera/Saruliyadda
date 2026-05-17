@@ -44,7 +44,7 @@ npm run dev
 ```
 The application will automatically open in your default browser.
 
-### Building for Production
+### Building for Production1
 
 To create a production-ready build:
 ```bash
