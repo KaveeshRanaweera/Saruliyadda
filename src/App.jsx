@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Leaf, ShoppingBag, Info, Star, Recycle, CheckCircle, MapPin, Phone, Mail, Truck, Users, ShieldCheck, Navigation, Search, Calculator, Calendar, Sprout, ChevronRight, Stethoscope, Award, BadgeCheck, ArrowRight, Eye, Droplet, Sun } from 'lucide-react';
 
+// Helper function to handle image paths with base path
+const img = (path) => `${typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/'}${path.startsWith('/') ? path.slice(1) : path}`;
+
 const FloatingLeaves = () => {
   const [leaves, setLeaves] = useState([]);
 

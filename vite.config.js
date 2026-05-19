@@ -8,4 +8,7 @@ const base = process.env.GITHUB_ACTIONS ? '/Saruliyadda/' : '/'
 export default defineConfig({
   plugins: [react()],
   base,
+  define: {
+    __BASE_PATH__: JSON.stringify(base),
+  },
 })
