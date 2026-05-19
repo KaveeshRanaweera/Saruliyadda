@@ -49,7 +49,7 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2 md:py-3' : 'bg-cream/90 backdrop-blur-md py-4 md:py-5'}`}>
       <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-2 md:gap-3 z-50">
-          <img src="HomePageImages/Logo.png" alt="Saruliyadda Logo" className="h-8 md:h-12 w-auto" />
+          <img src="/HomePageImages/Logo.png" alt="Saruliyadda Logo" className="h-8 md:h-12 w-auto" />
           <div>
             <span className="block font-serif font-bold text-lg md:text-2xl text-primary-900 leading-tight">Saruliyadda</span>
             <span className="block text-[10px] md:text-xs text-primary-600 font-medium tracking-wider uppercase">Garden Shop</span>
@@ -90,11 +90,11 @@ const Navbar = () => {
 
 const HeroSlider = () => {
   const slides = [
-    { img: 'HomePageImages/fruit 2.jpg', tag: '100% Organic', title: 'Grow Your Garden the Natural Way.', sub: 'Premium organic compost, delivered with love from Saruliyadda.' },
-    { img: 'HomePageImages/fruit 5.jpg', tag: 'Bountiful Harvests', title: 'Nutrients for Every Season.', sub: 'Give your plants the foundation they need to thrive and produce.' },
-    { img: 'HomePageImages/fruit 3.jpg', tag: 'Sustainable Farming', title: 'Protecting Mother Earth.', sub: 'Our compost helps retain soil moisture and reduce chemical runoff.' },
-    { img: 'HomePageImages/fruit 6.jpg', tag: 'Expert Care', title: 'Healthy Soil, Healthy Life.', sub: 'Join 5000+ gardeners transforming their land with Saruliyadda.' },
-    { img: 'HomePageImages/fruit 1.jpg', tag: 'Vibrant Blooms', title: 'Unlock Your Garden\'s Potential.', sub: 'From vegetables to exotic flowers, we have the right feed for you.' }
+    { img: '/HomePageImages/fruit 2.jpg', tag: '100% Organic', title: 'Grow Your Garden the Natural Way.', sub: 'Premium organic compost, delivered with love from Saruliyadda.' },
+    { img: '/HomePageImages/fruit 5.jpg', tag: 'Bountiful Harvests', title: 'Nutrients for Every Season.', sub: 'Give your plants the foundation they need to thrive and produce.' },
+    { img: '/HomePageImages/fruit 3.jpg', tag: 'Sustainable Farming', title: 'Protecting Mother Earth.', sub: 'Our compost helps retain soil moisture and reduce chemical runoff.' },
+    { img: '/HomePageImages/fruit 6.jpg', tag: 'Expert Care', title: 'Healthy Soil, Healthy Life.', sub: 'Join 5000+ gardeners transforming their land with Saruliyadda.' },
+    { img: '/HomePageImages/fruit 1.jpg', tag: 'Vibrant Blooms', title: 'Unlock Your Garden\'s Potential.', sub: 'From vegetables to exotic flowers, we have the right feed for you.' }
   ];
 
   const [current, setCurrent] = useState(0);
@@ -222,7 +222,7 @@ const TrustedBrands = () => {
           {/* Brand 1 */}
           <div className="bg-cream rounded-[2rem] p-8 md:p-10 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
             <div className="h-24 flex items-center mb-6">
-              <img src="HomePageImages/PartnerLogo7.png" alt="Unipower" className="h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform" />
+              <img src="/HomePageImages/PartnerLogo7.png" alt="Unipower" className="h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform" />
             </div>
             <h3 className="font-serif text-2xl font-bold text-gray-900 mb-3">Unipower Quality</h3>
             <p className="text-gray-600 mb-6 flex-1">
@@ -243,7 +243,7 @@ const TrustedBrands = () => {
           {/* Brand 2 */}
           <div className="bg-cream rounded-[2rem] p-8 md:p-10 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
             <div className="h-24 flex items-center mb-6">
-              <img src="HomePageImages/PartnerLogo1.png" alt="CIC" className="h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform" />
+              <img src="/HomePageImages/PartnerLogo1.png" alt="CIC" className="h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform" />
             </div>
             <h3 className="font-serif text-2xl font-bold text-gray-900 mb-3">CIC Agriculture</h3>
             <p className="text-gray-600 mb-6 flex-1">
@@ -271,7 +271,7 @@ const About = () => (
     <div className="container mx-auto px-4 sm:px-6">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="relative order-2 lg:order-1 px-4 sm:px-0 mt-8 lg:mt-0">
-          <img src="HomePageImages/fruit 7.jpg" alt="Our garden" className="rounded-3xl shadow-2xl w-full object-cover h-[300px] sm:h-[400px] lg:h-[500px]" />
+          <img src="/HomePageImages/fruit 7.jpg" alt="Our garden" className="rounded-3xl shadow-2xl w-full object-cover h-[300px] sm:h-[400px] lg:h-[500px]" />
           <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-6 bg-primary-800 text-white p-4 sm:p-8 rounded-2xl shadow-xl text-center border-4 border-white">
             <span className="block font-serif text-3xl sm:text-5xl font-bold mb-1">20+</span>
             <span className="block text-[10px] sm:text-sm uppercase tracking-wider text-primary-200 font-semibold">Years of Growing</span>
@@ -427,7 +427,7 @@ const SoilCalculator = () => {
 
   return (
     <section id="calculator" className="py-16 md:py-24 bg-primary-900 relative text-white">
-      <div className="absolute inset-0 bg-[url('Images/Compost20KG.jpg')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+      <div className="absolute inset-0 bg-[url('/Images/Compost20KG.jpg')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-xl border border-white/20 p-6 sm:p-8 md:p-12 rounded-[2rem] shadow-2xl">
           <div className="text-center mb-8 md:mb-10">
@@ -552,49 +552,49 @@ const Products = () => {
 
   const allProducts = [
     // Saruliyadda Range
-    { id: 'p1', name: "Compost 05 KG", cat: "saruliyadda", img: "Images/Compost05KG.jpg", desc: "Perfect for home gardens, flower pots, and small vegetable patches." },
-    { id: 'p2', name: "Compost 10 KG", cat: "saruliyadda", img: "Images/Compost10KG.jpg", desc: "Our bestseller! Ideal for medium gardens, raised beds, and landscaping." },
-    { id: 'p3', name: "Compost 20 KG", cat: "saruliyadda", img: "Images/Compost20KG.jpg", desc: "Best value for farms, large gardens, and commercial growing operations." },
-    { id: 'p4', name: "Coco Chips", cat: "saruliyadda", img: "Images/CocoChips.jpg" },
-    { id: 'p5', name: "Coir Dust", cat: "saruliyadda", img: "Images/CoirDust.jpg" },
-    { id: 'p6', name: "Cattle Manure", cat: "saruliyadda", img: "Images/CattleMannure.jpg" },
-    { id: 'p7', name: "Dahaiyya", cat: "saruliyadda", img: "Images/Dhaiyya.jpg" },
+    { id: 'p1', name: "Compost 05 KG", cat: "saruliyadda", img: "/Images/Compost05KG.jpg", desc: "Perfect for home gardens, flower pots, and small vegetable patches." },
+    { id: 'p2', name: "Compost 10 KG", cat: "saruliyadda", img: "/Images/Compost10KG.jpg", desc: "Our bestseller! Ideal for medium gardens, raised beds, and landscaping." },
+    { id: 'p3', name: "Compost 20 KG", cat: "saruliyadda", img: "/Images/Compost20KG.jpg", desc: "Best value for farms, large gardens, and commercial growing operations." },
+    { id: 'p4', name: "Coco Chips", cat: "saruliyadda", img: "/Images/CocoChips.jpg" },
+    { id: 'p5', name: "Coir Dust", cat: "saruliyadda", img: "/Images/CoirDust.jpg" },
+    { id: 'p6', name: "Cattle Manure", cat: "saruliyadda", img: "/Images/CattleMannure.jpg" },
+    { id: 'p7', name: "Dahaiyya", cat: "saruliyadda", img: "/Images/Dhaiyya.jpg" },
 
     // Unipower
-    { id: 'p8', name: "Yara Mila Target", cat: "unipower", img: "Images/YaraMilaTarget.jpg" },
-    { id: 'p9', name: "Yara Mila Complex", cat: "unipower", img: "Images/YaraMilaComplex.jpg" },
-    { id: 'p10', name: "Yara Mila Winner", cat: "unipower", img: "Images/YaraMilaWinner.jpg" },
-    { id: 'p11', name: "Yara Mila Grower", cat: "unipower", img: "Images/YaraMilaGrover.jpg" },
-    { id: 'p12', name: "Yara Mila Calcinit", cat: "unipower", img: "Images/YaraMilaCalcinit.jpg" },
-    { id: 'p13', name: "Yara Liva Tropicote", cat: "unipower", img: "Images/YaraLivaTropicote.jpg" },
-    { id: 'p14', name: "Yara Mila 25-7-7", cat: "unipower", img: "Images/YaraMila25-7-7.jpg" },
-    { id: 'p15', name: "Yara Mila 15-15-15", cat: "unipower", img: "Images/YaraMila15-15-15.jpg" },
-    { id: 'p16', name: "Nutrivant Plus", cat: "unipower", img: "Images/NutrivantPlus.jpg" },
-    { id: 'p17', name: "Osmocote High N", cat: "unipower", img: "Images/OsmocoteHighN.jpg" },
-    { id: 'p18', name: "Osmocote High K", cat: "unipower", img: "Images/OsmocoteHighK.jpg" },
-    { id: 'p19', name: "Osmocote All Purpose", cat: "unipower", img: "Images/OsmocoteAllPurpose.jpg" },
-    { id: 'p20', name: "Albert Solution", cat: "unipower", img: "Images/AlbertSolution.jpg" },
-    { id: 'p21', name: "Agri Phoska YPM", cat: "unipower", img: "Images/AgriPhoskaYPM.png" },
-    { id: 'p22', name: "Agri Phoska APM", cat: "unipower", img: "Images/AgroPhoskaAPM.png" },
-    { id: 'p23', name: "Grow More Nitro Plus", cat: "unipower", img: "Images/GrowMoreNitroPlus.jpg" },
-    { id: 'p24', name: "Grow More Plant Starter", cat: "unipower", img: "Images/GrowMorePlantStarter.jpg" },
-    { id: 'p25', name: "Grow More K44", cat: "unipower", img: "Images/GrowMoreK44.jpg" },
-    { id: 'p26', name: "Grow More Bloom Special", cat: "unipower", img: "Images/GrowMoreBloomSpecial.jpg" },
-    { id: 'p27', name: "Grow More 3 in 1", cat: "unipower", img: "Images/GrowMore3in1.jpg" },
-    { id: 'p28', name: "Crop Master", cat: "unipower", img: "Images/CropMaster.jpg" },
-    { id: 'p29', name: "Clonex", cat: "unipower", img: "Images/Clonex.jpg" },
-    { id: 'p30', name: "Rapid Root", cat: "unipower", img: "Images/RapidRoot.jpg" },
-    { id: 'p31', name: "Yara Vita Zintrac", cat: "unipower", img: "Images/YaraVitaZintrac.png" },
-    { id: 'p32', name: "Yara Vita Bortrac", cat: "unipower", img: "Images/YaraVitaBortrac.png" },
-    { id: 'p33', name: "Biofol Green Flush", cat: "unipower", img: "Images/BiofolGreenFlush.png" },
-    { id: 'p34', name: "Biofol Flower Booster", cat: "unipower", img: "Images/BiofolFlowerBooster.png" },
-    { id: 'p35', name: "Peters Professional", cat: "unipower", img: "Images/PetersProfessional.png" },
+    { id: 'p8', name: "Yara Mila Target", cat: "unipower", img: "/Images/YaraMilaTarget.jpg" },
+    { id: 'p9', name: "Yara Mila Complex", cat: "unipower", img: "/Images/YaraMilaComplex.jpg" },
+    { id: 'p10', name: "Yara Mila Winner", cat: "unipower", img: "/Images/YaraMilaWinner.jpg" },
+    { id: 'p11', name: "Yara Mila Grower", cat: "unipower", img: "/Images/YaraMilaGrover.jpg" },
+    { id: 'p12', name: "Yara Mila Calcinit", cat: "unipower", img: "/Images/YaraMilaCalcinit.jpg" },
+    { id: 'p13', name: "Yara Liva Tropicote", cat: "unipower", img: "/Images/YaraLivaTropicote.jpg" },
+    { id: 'p14', name: "Yara Mila 25-7-7", cat: "unipower", img: "/Images/YaraMila25-7-7.jpg" },
+    { id: 'p15', name: "Yara Mila 15-15-15", cat: "unipower", img: "/Images/YaraMila15-15-15.jpg" },
+    { id: 'p16', name: "Nutrivant Plus", cat: "unipower", img: "/Images/NutrivantPlus.jpg" },
+    { id: 'p17', name: "Osmocote High N", cat: "unipower", img: "/Images/OsmocoteHighN.jpg" },
+    { id: 'p18', name: "Osmocote High K", cat: "unipower", img: "/Images/OsmocoteHighK.jpg" },
+    { id: 'p19', name: "Osmocote All Purpose", cat: "unipower", img: "/Images/OsmocoteAllPurpose.jpg" },
+    { id: 'p20', name: "Albert Solution", cat: "unipower", img: "/Images/AlbertSolution.jpg" },
+    { id: 'p21', name: "Agri Phoska YPM", cat: "unipower", img: "/Images/AgriPhoskaYPM.png" },
+    { id: 'p22', name: "Agri Phoska APM", cat: "unipower", img: "/Images/AgroPhoskaAPM.png" },
+    { id: 'p23', name: "Grow More Nitro Plus", cat: "unipower", img: "/Images/GrowMoreNitroPlus.jpg" },
+    { id: 'p24', name: "Grow More Plant Starter", cat: "unipower", img: "/Images/GrowMorePlantStarter.jpg" },
+    { id: 'p25', name: "Grow More K44", cat: "unipower", img: "/Images/GrowMoreK44.jpg" },
+    { id: 'p26', name: "Grow More Bloom Special", cat: "unipower", img: "/Images/GrowMoreBloomSpecial.jpg" },
+    { id: 'p27', name: "Grow More 3 in 1", cat: "unipower", img: "/Images/GrowMore3in1.jpg" },
+    { id: 'p28', name: "Crop Master", cat: "unipower", img: "/Images/CropMaster.jpg" },
+    { id: 'p29', name: "Clonex", cat: "unipower", img: "/Images/Clonex.jpg" },
+    { id: 'p30', name: "Rapid Root", cat: "unipower", img: "/Images/RapidRoot.jpg" },
+    { id: 'p31', name: "Yara Vita Zintrac", cat: "unipower", img: "/Images/YaraVitaZintrac.png" },
+    { id: 'p32', name: "Yara Vita Bortrac", cat: "unipower", img: "/Images/YaraVitaBortrac.png" },
+    { id: 'p33', name: "Biofol Green Flush", cat: "unipower", img: "/Images/BiofolGreenFlush.png" },
+    { id: 'p34', name: "Biofol Flower Booster", cat: "unipower", img: "/Images/BiofolFlowerBooster.png" },
+    { id: 'p35', name: "Peters Professional", cat: "unipower", img: "/Images/PetersProfessional.png" },
 
     // Tools & Accessories
-    { id: 'p36', name: "Insect Proof Net", cat: "tools", img: "Images/InsectProofNet.jpg" },
-    { id: 'p37', name: "Poly Mulch", cat: "tools", img: "Images/PolyMulch.jpg" },
-    { id: 'p38', name: "Shade Nets", cat: "tools", img: "Images/ShadeNets.jpg" },
-    { id: 'p39', name: "Trellising Twine", cat: "tools", img: "Images/Trellising Twine.jpg" }
+    { id: 'p36', name: "Insect Proof Net", cat: "tools", img: "/Images/InsectProofNet.jpg" },
+    { id: 'p37', name: "Poly Mulch", cat: "tools", img: "/Images/PolyMulch.jpg" },
+    { id: 'p38', name: "Shade Nets", cat: "tools", img: "/Images/ShadeNets.jpg" },
+    { id: 'p39', name: "Trellising Twine", cat: "tools", img: "/Images/Trellising Twine.jpg" }
   ];
 
   const filteredProducts = allProducts.filter(p => {
@@ -664,7 +664,7 @@ const Products = () => {
                       <Eye size={14} /> Quick View
                     </span>
                   </div>
-                  <img src={p.img} alt={p.name} className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" onError={(e) => e.target.src = 'HomePageImages/Logo.png'} />
+                  <img src={p.img} alt={p.name} className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" onError={(e) => e.target.src = '/HomePageImages/Logo.png'} />
                 </div>
                 <div className="mt-auto text-center px-1 mb-2 flex-1 flex flex-col">
                   <span className="text-[10px] sm:text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1 truncate">{p.cat}</span>
@@ -685,7 +685,7 @@ const Products = () => {
             </button>
             
             <div className="w-full md:w-1/2 bg-cream p-8 md:p-12 flex items-center justify-center relative group">
-              <img src={selectedProduct.img} alt={selectedProduct.name} className="w-full max-w-[250px] md:max-w-none h-auto max-h-[300px] md:max-h-[450px] object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-500" onError={(e) => e.target.src = 'HomePageImages/Logo.png'} />
+              <img src={selectedProduct.img} alt={selectedProduct.name} className="w-full max-w-[250px] md:max-w-none h-auto max-h-[300px] md:max-h-[450px] object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-500" onError={(e) => e.target.src = '/HomePageImages/Logo.png'} />
             </div>
             
             <div className="w-full md:w-1/2 p-8 md:p-12 relative flex flex-col justify-center">
@@ -760,7 +760,7 @@ const Stores = () => (
 
 const Contact = () => (
   <section id="contact" className="py-16 md:py-24 bg-primary-900 text-white relative">
-    <div className="absolute inset-0 bg-[url('HomePageImages/fruit%202.jpg')] opacity-[0.05] bg-cover bg-center"></div>
+    <div className="absolute inset-0 bg-[url('/HomePageImages/fruit%202.jpg')] opacity-[0.05] bg-cover bg-center"></div>
     <div className="container mx-auto px-4 sm:px-6 relative z-10">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
@@ -817,9 +817,9 @@ const OurCompost = () => (
 
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {[
-          { img: "Images/Compost05KG.jpg", name: "5 KG Pack", desc: "Perfect for home gardens, flower pots, and small vegetable patches.", popular: false },
-          { img: "Images/Compost10KG.jpg", name: "10 KG Pack", desc: "Our bestseller! Ideal for medium gardens, raised beds, and landscaping.", popular: true },
-          { img: "Images/Compost20KG.jpg", name: "20 KG Pack", desc: "Best value for farms, large gardens, and commercial growing operations.", popular: false }
+          { img: "/Images/Compost05KG.jpg", name: "5 KG Pack", desc: "Perfect for home gardens, flower pots, and small vegetable patches.", popular: false },
+          { img: "/Images/Compost10KG.jpg", name: "10 KG Pack", desc: "Our bestseller! Ideal for medium gardens, raised beds, and landscaping.", popular: true },
+          { img: "/Images/Compost20KG.jpg", name: "20 KG Pack", desc: "Best value for farms, large gardens, and commercial growing operations.", popular: false }
         ].map((item, idx) => (
           <div key={idx} className={`bg-white rounded-3xl p-6 sm:p-8 flex flex-col h-full border ${item.popular ? 'border-primary-400 shadow-xl relative transform md:-translate-y-4' : 'border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2'} transition-all duration-300`}>
             {item.popular && (
@@ -872,11 +872,11 @@ const Testimonials = () => (
 
 const PartnersMarquee = () => {
   const logos = [
-    { img: 'HomePageImages/PartnerLogo1.png', label: 'CIC' },
-    { img: 'HomePageImages/PartnerLogo3.jpg', label: 'Partner' },
-    { img: 'HomePageImages/PartnerLogo5.jpg', label: 'Partner' },
-    { img: 'HomePageImages/PartnerLogo7.png', label: 'Unipower' },
-    { img: 'HomePageImages/PartnerLogo8.png', label: 'Partner' }
+    { img: '/HomePageImages/PartnerLogo1.png', label: 'CIC' },
+    { img: '/HomePageImages/PartnerLogo3.jpg', label: 'Partner' },
+    { img: '/HomePageImages/PartnerLogo5.jpg', label: 'Partner' },
+    { img: '/HomePageImages/PartnerLogo7.png', label: 'Unipower' },
+    { img: '/HomePageImages/PartnerLogo8.png', label: 'Partner' }
   ];
   return (
     <section className="py-12 md:py-16 bg-white border-y border-gray-100">
@@ -920,7 +920,7 @@ export default function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-10 md:mb-12 border-b border-white/10 pb-10 md:pb-12">
             <div className="sm:col-span-2 lg:col-span-2">
               <div className="flex items-center gap-3 mb-5 md:mb-6">
-                <img src="HomePageImages/Logo.png" alt="Logo" className="h-10 md:h-12 brightness-0 invert" />
+                <img src="/HomePageImages/Logo.png" alt="Logo" className="h-10 md:h-12 brightness-0 invert" />
                 <div>
                   <span className="block font-serif font-bold text-xl md:text-2xl text-white">Saruliyadda</span>
                   <span className="block text-xs tracking-widest text-primary-500 uppercase">Garden Shop</span>
