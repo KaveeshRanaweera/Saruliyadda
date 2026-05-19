@@ -311,12 +311,14 @@ const About = () => (
 
 const PlantClinic = () => {
   const [selectedIssue, setSelectedIssue] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const issues = [
     {
       id: 1,
       symptom: "Yellowing Leaves",
       emoji: "🍂",
+      keywords: ["yellow", "pale", "color", "fading", "light", "leaves", "bottom leaves"],
       diagnosis: "Nitrogen Deficiency or Overwatering.",
       solution: "Apply our Grow More Nitro Plus or mix Saruliyadda Cattle Manure into the topsoil to boost Nitrogen.",
     },
@@ -324,63 +326,108 @@ const PlantClinic = () => {
       id: 2,
       symptom: "Poor Flowering/Fruiting",
       emoji: "🌸",
+      keywords: ["flower", "fruit", "bloom", "yield", "drop", "small", "no flowers", "dropping flowers"],
       diagnosis: "Phosphorus/Potassium Deficiency.",
       solution: "Use Biofol Flower Booster or Osmocote High K during the blooming stage.",
     },
     {
       id: 3,
-      symptom: "Stunted Growth",
+      symptom: "Stunted or Slow Growth",
       emoji: "🌱",
-      diagnosis: "Poor Soil Structure / Lack of Microbes.",
+      keywords: ["slow", "small", "stunted", "not growing", "stop", "growth"],
+      diagnosis: "Poor Soil Structure / Lack of Nutrients.",
       solution: "Till in Saruliyadda Premium Compost to aerate the soil and introduce beneficial microorganisms.",
     },
     {
       id: 4,
-      symptom: "Wilting in Sun",
+      symptom: "Wilting in Sun / Dry Soil",
       emoji: "☀️",
+      keywords: ["wilt", "dry", "droop", "heat", "sun", "water", "dying in sun", "wilting"],
       diagnosis: "Poor moisture retention or extreme heat.",
       solution: "Apply Coco Chips as mulch on the surface, and consider setting up our Shade Nets.",
+    },
+    {
+      id: 5,
+      symptom: "Holes in Leaves / Pest Damage",
+      emoji: "🐛",
+      keywords: ["hole", "bite", "insect", "pest", "bug", "eat", "caterpillar", "brown spots", "eaten"],
+      diagnosis: "Pest Infestation (Caterpillars/Beetles).",
+      solution: "Install Insect Proof Nets to physically protect crops from pests without harmful chemicals.",
+    },
+    {
+      id: 6,
+      symptom: "Root Rot (Black/Mushy Roots)",
+      emoji: "🥀",
+      keywords: ["mushy", "black roots", "dying", "smell", "rot", "root"],
+      diagnosis: "Severe Overwatering and Poor Drainage.",
+      solution: "Mix Coir Dust and Coco Chips into your soil to drastically improve drainage and aeration.",
     }
   ];
+
+  const filteredIssues = issues.filter(issue => {
+    if (!searchQuery.trim()) return true;
+    const query = searchQuery.toLowerCase();
+    return issue.symptom.toLowerCase().includes(query) || 
+           issue.keywords.some(k => query.includes(k) || k.includes(query));
+  });
 
   return (
     <section id="clinic" className="py-16 md:py-24 bg-primary-50 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"></div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
           <div className="inline-flex items-center gap-2 bg-white text-primary-800 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full font-semibold text-xs sm:text-sm mb-4 shadow-sm border border-primary-100">
-            <Stethoscope size={14} className="sm:w-4 sm:h-4 text-primary-600" /> Plant Clinic
+            <Stethoscope size={14} className="sm:w-4 sm:h-4 text-primary-600" /> Plant Diagnosis
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-primary-900 mb-3 md:mb-4">What's wrong with my plant?</h2>
-          <p className="text-gray-600 text-sm sm:text-lg">Select a symptom below and our digital agronomist will recommend the perfect solution.</p>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-primary-900 mb-4 md:mb-6">Describe Your Plant's Fault</h2>
+          
+          <div className="relative max-w-lg mx-auto">
+            <input 
+              type="text" 
+              placeholder="e.g. 'My plant has yellow leaves' or 'holes'" 
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setSelectedIssue(null);
+              }}
+              className="w-full pl-5 pr-12 py-3 sm:py-4 rounded-full border-2 border-primary-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-100 outline-none transition-all text-sm sm:text-base bg-white shadow-md text-gray-800"
+            />
+            <Search className="absolute right-5 top-1/2 -translate-y-1/2 text-primary-400" size={20} />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {/* Symptoms List */}
-          <div className="space-y-4">
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Select a Symptom:</h3>
-            {issues.map(issue => (
-              <button
-                key={issue.id}
-                onClick={() => setSelectedIssue(issue)}
-                className={`w-full text-left p-4 sm:p-5 rounded-2xl border-2 transition-all duration-300 flex items-center justify-between group ${selectedIssue?.id === issue.id ? 'bg-primary-800 border-primary-800 text-white shadow-lg shadow-primary-900/20' : 'bg-white border-white hover:border-primary-300 text-gray-800 shadow-sm'}`}
-              >
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <span className="text-2xl sm:text-3xl">{issue.emoji}</span>
-                  <span className="font-semibold text-base sm:text-lg">{issue.symptom}</span>
-                </div>
-                <ChevronRight className={`transition-transform ${selectedIssue?.id === issue.id ? 'text-primary-300 rotate-90 md:rotate-0' : 'text-gray-300 group-hover:text-primary-400'}`} />
-              </button>
-            ))}
+          <div className="space-y-3 sm:space-y-4 max-h-[450px] overflow-y-auto pr-2 custom-scrollbar">
+            {filteredIssues.length > 0 ? (
+              filteredIssues.map(issue => (
+                <button
+                  key={issue.id}
+                  onClick={() => setSelectedIssue(issue)}
+                  className={`w-full text-left p-4 sm:p-5 rounded-2xl border-2 transition-all duration-300 flex items-center justify-between group ${selectedIssue?.id === issue.id ? 'bg-primary-800 border-primary-800 text-white shadow-lg shadow-primary-900/20' : 'bg-white border-white hover:border-primary-300 text-gray-800 shadow-sm'}`}
+                >
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="text-2xl sm:text-3xl">{issue.emoji}</span>
+                    <span className="font-semibold text-base sm:text-lg">{issue.symptom}</span>
+                  </div>
+                  <ChevronRight className={`transition-transform ${selectedIssue?.id === issue.id ? 'text-primary-300 rotate-90 md:rotate-0' : 'text-gray-300 group-hover:text-primary-400'}`} />
+                </button>
+              ))
+            ) : (
+              <div className="text-center py-10 bg-white rounded-2xl border border-gray-100 h-full flex flex-col justify-center">
+                <p className="text-gray-500 text-lg">No matching faults found.</p>
+                <button onClick={() => setSearchQuery('')} className="text-primary-600 font-semibold mt-2 hover:underline">View all common faults</button>
+              </div>
+            )}
           </div>
 
           {/* Diagnosis Box */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-primary-100 relative h-full flex flex-col">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-primary-100 relative h-full flex flex-col min-h-[350px]">
             {!selectedIssue ? (
-              <div className="flex-1 flex flex-col items-center justify-center text-gray-400 text-center py-12">
+              <div className="flex-1 flex flex-col items-center justify-center text-gray-400 text-center py-8">
                 <Leaf size={64} className="mb-4 opacity-20" />
-                <p className="text-base sm:text-lg">Select a symptom from the left to get a diagnosis.</p>
+                <p className="text-base sm:text-lg">Select a matching fault from the left to get a diagnosis.</p>
               </div>
             ) : (
               <div className="flex-1 flex flex-col animate-fade-in-up">
@@ -402,7 +449,7 @@ const PlantClinic = () => {
                   onClick={() => {
                     document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="btn-primary w-full justify-center py-3.5 sm:py-4 bg-primary-50 text-primary-900 hover:bg-primary-100 border border-primary-200 text-sm sm:text-base"
+                  className="btn-primary w-full justify-center py-3.5 sm:py-4 bg-primary-50 text-primary-900 hover:bg-primary-100 border border-primary-200 text-sm sm:text-base mt-auto"
                 >
                   <Search size={18} /> View Recommended Products
                 </button>
@@ -901,14 +948,20 @@ export default function App() {
       <main>
         <HeroSlider />
         <TrustBar />
+        
+        {/* Core Offerings at the top */}
         <OurCompost />
-        <TrustedBrands />
-        <About />
-        <Testimonials />
+        <Products />
         <PlantClinic />
+        
+        {/* Supporting info & Tools below */}
         <SoilCalculator />
         <PlantingCalendar />
-        <Products />
+        <TrustedBrands />
+        
+        {/* Company info & Social proof at bottom */}
+        <Testimonials />
+        <About />
         <PartnersMarquee />
         <Stores />
         <Contact />
